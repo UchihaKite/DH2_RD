@@ -1,23 +1,39 @@
-#include <SFML/Graphics.hpp>
+#include "Engine.h"
+
+#define WindowRes_X 1028
+#define WindowRes_Y 720
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
+	sf::RenderWindow Window(sf::VideoMode(WindowRes_X, WindowRes_Y), "DH2 Part 2");
+	Engine s_Engine;
 
-	while (window.isOpen())
+	sf::Clock s_Clock;
+	while (Window.isOpen())
 	{
-		sf::Event event;
-		while (window.pollEvent(event))
+		sf::Time s_Time = s_Clock.restart();
+		float DeltaTimeAsSeconds = s_Time.asSeconds();
+
+		sf::Event s_Event;
+		while (Window.pollEvent(s_Event))
 		{
-			if (event.type == sf::Event::Closed)
-				window.close();
+			if (s_Event.type == sf::Event::KeyPressed)
+			{
+				if (s_Event.key.code == sf::Keyboard::Escape)
+				{
+					Window.close();
+				}
+			}
+			if (s_Event.type == sf::Event::Closed)
+			{
+				Window.close();
+			}
 		}
 
-		window.clear();
-		window.draw(shape);
-		window.display();
+		Window.clear();
+		s_Engine.Update(&Window, DeltaTimeAsSeconds);
+		s_Engine.Draw(&Window);
+		Window.display();
 	}
 
 	return 0;
