@@ -29,12 +29,10 @@ int main()
 				Window.close();
 			}
 		}
-
 		Window.clear();
 		s_Engine.Update(&Window, DeltaTimeAsSeconds);
 		s_Engine.Draw(&Window);
 		Window.display();
 	}
-
 	return 0;
 }
