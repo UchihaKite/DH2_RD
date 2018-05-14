@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Main.cpp
   GameObjects.cpp
   Engine.cpp
@@ -6,3 +7,8 @@ c:\users\uchihakite\desktop\dh2_rd\dh2\dh2\assetmanagerscpp.cpp(52): warning C42
   Generating Code...
   DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
   DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)
+=======
+﻿  GameObjects.cpp
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)
+>>>>>>> master
