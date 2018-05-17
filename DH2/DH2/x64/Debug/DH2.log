@@ -1,9 +1,8 @@
-﻿  Main.cpp
-  GameObjects.cpp
-  Engine.cpp
-  AudioManager.cpp
-  AssetManagers.cpp
-c:\users\uchihakite\desktop\dh2_rd\dh2\dh2\assetmanagers.cpp(52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  Stat.cpp
+  ICharacter.cpp
   Generating Code...
-  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
-  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)
+  Compiling...
+  GameObjects.cpp
+  Generating Code...
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)

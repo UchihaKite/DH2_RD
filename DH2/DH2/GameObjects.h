@@ -18,7 +18,7 @@ public:
 	void SetPosition(sf::Vector2f newPos) { m_pos = newPos; }
 	void SetSize(sf::Vector2f newSize) { m_size = newSize; }
 
-private:
+protected:
 	sf::Vector2f m_pos;
 	sf::Vector2f m_size;
 };
