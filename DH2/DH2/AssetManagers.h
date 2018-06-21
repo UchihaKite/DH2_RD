@@ -51,6 +51,9 @@ public:
 	void PlayAnimation(enum AnimationType Type, float DeltaTime);
 
 private:
+
+	void Animate(float DeltaTime, std::vector<sf::IntRect> InFrames);
+
 	int m_AnimationLength;
 	sf::Vector2i m_SheetPosition;
 	int m_AnimationTick;

@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "ICharacter.h"
+
 class Engine
 {
 public:
@@ -11,4 +13,8 @@ public:
 
 private:
 	
+	sf::Texture m_backgroundTex;
+	sf::Sprite m_background;
+
+	ICharacter* testerDude;
 };
