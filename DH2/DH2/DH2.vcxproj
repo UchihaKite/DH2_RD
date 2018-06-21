@@ -132,19 +132,23 @@
   <ItemGroup>
     <ClCompile Include="AssetManagers.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="CharacterClass.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GameObjects.cpp" />
     <ClCompile Include="ICharacter.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Stat.cpp" />
+    <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManagers.h" />
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="CharacterClass.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GameObjects.h" />
     <ClInclude Include="ICharacter.h" />
     <ClInclude Include="Stat.h" />
+    <ClInclude Include="Warrior.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,25 +2,35 @@
 #include "GameObjects.h"
 #include "Stat.h"
 #include <iostream>
+#include "CharacterClass.h"
+#include "AssetManagers.h"
 
 //This may become abstract, making as plain as possible while I work out exact design
+//Should never make an ICharacter directly though I am right now for testing ... whoops
+//could probably abstract for that reason. But to make a new character you'll call for most likely PlayerCharacter or something of that nature, then AICharacter. 
 class ICharacter : public GameObject
 {
 public:
-	ICharacter(sf::Vector2f pos, sf::Vector2f size);
+	ICharacter(std::string FileLocation, sf::Vector2f pos, sf::Vector2f size);
 	~ICharacter();
 
-	//These may get moved into other interfaces
-	void Attack();
-	void Defend();
-	void UseItem();
-	void GainExperience(float earnedXp);
-	void LevelUp();
+	virtual void Draw(sf::RenderWindow* window);
+	virtual void Update(sf::RenderWindow* window, float dt);
 
-private:
+	//These may get moved into other interfaces
+	//For now these must be overloaded in child classes
+	virtual void Attack();
+	virtual void Defend();
+	virtual void UseItem();
+	void GainExperience(float earnedXp);
+	virtual void LevelUp();
+
+protected:
 
 	std::string m_Name;
-	std::string m_Class;
+	CharacterClass* m_Class;
+
+	AnimationManager* m_animator;
 
 	//Better as an array, May rework how they're created/fetched to allow easier creation
 	Stat* m_Strength;

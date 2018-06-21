@@ -1,6 +1,8 @@
 #include "AssetManagers.h"
 #include <iostream>
 
+const int SPRITE_SIZE = 96;
+
 SpriteManager::SpriteManager(std::string FileLocation, sf::Vector2f Scale, sf::Vector2f Position, sf::Vector2f Origin) :
 	m_FileLocation(FileLocation),
 	m_Scale(Scale),
@@ -37,7 +39,7 @@ AnimationManager::AnimationManager(std::string FileLocation, sf::Vector2f Scale,
 	m_AnimationCap(0),
 	m_StartAnimation(false)
 {
-	m_Sprite.setTextureRect(sf::IntRect(0, 0, 192, 192));
+	m_Sprite.setTextureRect(sf::IntRect(0, 0, SPRITE_SIZE, SPRITE_SIZE));
 	m_ShadowTexture.loadFromFile("Sprites/shadow.png");
 }
 
@@ -49,7 +51,7 @@ void AnimationManager::Update(float DeltaTime)
 void AnimationManager::Draw(sf::RenderWindow* Window)
 {
 	m_ShadowSprite.setTexture(m_ShadowTexture);
-	m_ShadowSprite.setPosition(m_Sprite.getPosition() + sf::Vector2f(m_SheetPosition.x - 200, m_SheetPosition.y - 24));
+	m_ShadowSprite.setPosition(m_Sprite.getPosition() - sf::Vector2f(m_SheetPosition.x - 10.f, m_SheetPosition.y - 175.f));
 	Window->draw(m_ShadowSprite);
 	SpriteManager::Draw(Window);
 }
@@ -60,21 +62,21 @@ void AnimationManager::SetUpFrames(AnimationType Type)
 	{
 		for (int AddFrame = 0; AddFrame <= m_AnimationLength; AddFrame++)
 		{
-			m_IdleFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, 192, 192));
+			m_IdleFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, SPRITE_SIZE, SPRITE_SIZE));
 		}
 	}
 	if (Type == WALK)
 	{
 		for (int AddFrame = 0; AddFrame <= m_AnimationLength; AddFrame++)
 		{
-			m_WalkFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, 192, 192));
+			m_WalkFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, SPRITE_SIZE, SPRITE_SIZE));
 		}
 	}
 	if (Type == POWERUP)
 	{
 		for (int AddFrame = 0; AddFrame <= m_AnimationLength; AddFrame++)
 		{
-			m_PowerUpFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, 192, 192));
+			m_PowerUpFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, SPRITE_SIZE, SPRITE_SIZE));
 		}
 	}
 }
@@ -85,45 +87,30 @@ void AnimationManager::PlayAnimation(AnimationType Type, float DeltaTime) // Use
 	{
 		if (Type == IDLE)
 		{
-			m_DeltaTime += DeltaTime;
-			if (m_DeltaTime > 0.2f)
-			{
-				m_DeltaTime = 0;
-				m_AnimationTick++;
-				m_Sprite.setTextureRect(m_IdleFrames[m_AnimationTick]);
-				if (m_AnimationTick >= m_AnimationCap)
-				{
-					m_AnimationTick = 0;
-				}
-			}
+			Animate(DeltaTime, m_IdleFrames);
 		}
 		if (Type == WALK)
 		{
-			m_DeltaTime += DeltaTime;
-			if (m_DeltaTime > 0.2f)
-			{
-				m_DeltaTime = 0;
-				m_AnimationTick++;
-				m_Sprite.setTextureRect(m_WalkFrames[m_AnimationTick]);
-				if (m_AnimationTick >= m_AnimationCap)
-				{
-					m_AnimationTick = 0;
-				}
-			}
+			Animate(DeltaTime, m_WalkFrames);
 		}
 		if (Type == POWERUP)
 		{
-			m_DeltaTime += DeltaTime;
-			if (m_DeltaTime > 0.2f)
-			{
-				m_DeltaTime = 0;
-				m_AnimationTick++;
-				m_Sprite.setTextureRect(m_PowerUpFrames[m_AnimationTick]);
-				if (m_AnimationTick >= m_AnimationCap)
-				{
-					m_AnimationTick = 0;
-				}
-			}
+			Animate(DeltaTime, m_PowerUpFrames);
+		}
+	}
+}
+
+void AnimationManager::Animate(float DeltaTime, std::vector<sf::IntRect> InFrames)
+{
+	m_DeltaTime += DeltaTime;
+	if (m_DeltaTime > 0.2f)
+	{
+		m_DeltaTime = 0;
+		m_AnimationTick++;
+		m_Sprite.setTextureRect(InFrames[m_AnimationTick]);
+		if (m_AnimationTick >= m_AnimationCap)
+		{
+			m_AnimationTick = 0;
 		}
 	}
 }
