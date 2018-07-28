@@ -41,25 +41,20 @@ void ICharacter::Update(sf::RenderWindow * window, float dt)
 	m_animator->Update(dt);
 }
 
-void ICharacter::Attack()
+void ICharacter::TakeDamage(float dmg)
 {
-	//Will Probably make an interface for skills, Actions/Reactions
-	//Placing these as examples, but we might not want the character to care about anything other than holding stats
-	//We want it plain enough for skill/class etc swapping if we so choose to implement
+	m_Health->SubtractCurrent(dmg);
+
+	if (m_Health->GetCurrent() <= 0.f) //Stat should Clamp to 0 but to be sure
+	{
+		Die();
+	}
 }
 
-void ICharacter::Defend()
+void ICharacter::Die()
 {
-	//Will Probably make an interface for skills, Actions/Reactions
-	//Placing these as examples, but we might not want the character to care about anything other than holding stats
-	//We want it plain enough for skill/class etc swapping if we so choose to implement
-}
-
-void ICharacter::UseItem()
-{
-	//Will Probably make an interface for skills, Actions/Reactions
-	//Placing these as examples, but we might not want the character to care about anything other than holding stats
-	//We want it plain enough for skill/class etc swapping if we so choose to implement
+	//If we drop to 0, kill this fucker
+	delete this; // probably shouldn't do it like this haha thug life
 }
 
 void ICharacter::GainExperience(float earnedXp)

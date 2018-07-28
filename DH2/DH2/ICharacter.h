@@ -16,12 +16,17 @@ public:
 
 	virtual void Draw(sf::RenderWindow* window);
 	virtual void Update(sf::RenderWindow* window, float dt);
+	
+	float GetLevel() { return m_Level->GetCurrent(); }
+	float GetStrength() { return m_Strength->GetCurrent(); }
+	float GetDefense() { return m_Defense->GetCurrent(); }
+	float GetMagic() { return m_Magic->GetCurrent(); }
+	float GetDexterity() { return m_Dexterity->GetCurrent(); }
+	float GetHealth() { return m_Health->GetCurrent(); }
 
-	//These may get moved into other interfaces
-	//For now these must be overloaded in child classes
-	virtual void Attack();
-	virtual void Defend();
-	virtual void UseItem();
+	void TakeDamage(float dmg);
+	void Die();
+
 	void GainExperience(float earnedXp);
 	virtual void LevelUp();
 
