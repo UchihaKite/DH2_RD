@@ -106,8 +106,8 @@ void AnimationManager::Animate(float DeltaTime, std::vector<sf::IntRect> InFrame
 	if (m_DeltaTime > 0.2f)
 	{
 		m_DeltaTime = 0;
-		m_AnimationTick++;
 		m_Sprite.setTextureRect(InFrames[m_AnimationTick]);
+		m_AnimationTick++;
 		if (m_AnimationTick >= m_AnimationCap)
 		{
 			m_AnimationTick = 0;

@@ -15,6 +15,12 @@ Engine::Engine()
 	m_background.setOrigin(0.f, 0.f);
 
 	testerDude = new ICharacter("Sprites/Characters/AdamShield.png", sf::Vector2f(200.f, 200.f), sf::Vector2f(2.0f, 2.0f));
+
+	testerDude->m_animator->SetSheetPosition(sf::Vector2i(96, 0));
+	testerDude->m_animator->SetAnimationLength(4);
+	testerDude->m_animator->SetAnimationCap(4);
+	testerDude->m_animator->SetUpFrames(AnimationType::IDLE);
+	testerDude->m_animator->AnimationControl(true);
 }
 
 Engine::~Engine()
@@ -30,4 +36,5 @@ void Engine::Draw(sf::RenderWindow* Window)
 
 void Engine::Update(sf::RenderWindow* Window, float DeltaTime)
 {
+	testerDude->m_animator->PlayAnimation(AnimationType::IDLE, DeltaTime);
 }

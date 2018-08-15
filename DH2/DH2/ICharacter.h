@@ -30,12 +30,12 @@ public:
 	void GainExperience(float earnedXp);
 	virtual void LevelUp();
 
+	AnimationManager* m_animator;
+
 protected:
 
 	std::string m_Name;
 	CharacterClass* m_Class;
-
-	AnimationManager* m_animator;
 
 	//Better as an array, May rework how they're created/fetched to allow easier creation
 	Stat* m_Strength;
