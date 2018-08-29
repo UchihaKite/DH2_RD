@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "ICharacter.h"
+#include "CharacterCreator.h"
 
 class Engine
 {

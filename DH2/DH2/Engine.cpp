@@ -14,13 +14,19 @@ Engine::Engine()
 	m_background.setPosition(0.f, 0.f);
 	m_background.setOrigin(0.f, 0.f);
 
-	testerDude = new ICharacter("Sprites/Characters/AdamShield.png", sf::Vector2f(200.f, 200.f), sf::Vector2f(2.0f, 2.0f));
+	//Testville USA ==================================================================================
+	////==============================================================================================
+
+	testerDude = CharacterCreator::getInstance().CreatePlayerCharacter();
+
+	testerDude->PrintStats(); //Check to see if the new class is set right (working = traveler, not = newcomer)
 
 	testerDude->m_animator->SetSheetPosition(sf::Vector2i(96, 0));
 	testerDude->m_animator->SetAnimationLength(4);
 	testerDude->m_animator->SetAnimationCap(4);
 	testerDude->m_animator->SetUpFrames(AnimationType::IDLE);
 	testerDude->m_animator->AnimationControl(true);
+	////==============================================================================================
 }
 
 Engine::~Engine()

@@ -12,6 +12,8 @@ public:
 	CharacterClass();
 	~CharacterClass();
 
+	std::string GetClassName() { return m_className; }
+
 protected:
 	//std::vector<Skills> m_skillList; //List of skills (to be made)
 	//JobTree* m_jobTree; //The job tree, on level up character will recieve skill/stat points. May apply there or whatever

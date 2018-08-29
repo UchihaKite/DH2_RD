@@ -24,6 +24,25 @@ public:
 	float GetDexterity() { return m_Dexterity->GetCurrent(); }
 	float GetHealth() { return m_Health->GetCurrent(); }
 
+	CharacterClass* GetCharacterClass() { return m_Class; }
+	void SetCharacterClass(CharacterClass* newClass) { m_Class = newClass; }
+
+	void PrintStats() // Temp implementation. This will eventually grab stats for UI readouts or whatever, but not print to logs unless we really want to.
+	{
+		std::cout << "Health: " << GetHealth() << std::endl;
+
+		if (m_Class != NULL)
+		{
+			std::cout << "Class: " << m_Class->GetClassName() << std::endl;
+		}
+
+		std::cout << "Strength: " << GetStrength() << std::endl;
+		std::cout << "Defense: " << GetDefense() << std::endl;
+		std::cout << "Magic: " << GetMagic() << std::endl;
+		std::cout << "Dexterity: " << GetDexterity() << std::endl;
+		std::cout << "Level: " << GetLevel() << std::endl;
+	}
+
 	void TakeDamage(float dmg);
 	void Die();
 

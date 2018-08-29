@@ -3,7 +3,6 @@
 ICharacter::ICharacter(std::string FileLocation, sf::Vector2f pos, sf::Vector2f size) : GameObject(pos, size)
 {
 	m_Name = "BaseCharacter"; //Make a randomizer or let the Player type their desired name
-	//m_Class = new Warrior();
 
 	m_animator = new AnimationManager(FileLocation, sf::Vector2f(2.0f, 2.0f), pos, sf::Vector2f(0.f, 0.f));
 

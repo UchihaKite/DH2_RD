@@ -51,7 +51,8 @@ void AnimationManager::Update(float DeltaTime)
 void AnimationManager::Draw(sf::RenderWindow* Window)
 {
 	m_ShadowSprite.setTexture(m_ShadowTexture);
-	m_ShadowSprite.setPosition(m_Sprite.getPosition() - sf::Vector2f(m_SheetPosition.x - 10.f, m_SheetPosition.y - 175.f));
+	m_ShadowSprite.setPosition(m_Sprite.getPosition() - sf::Vector2f(m_SheetPosition.x - 110.f, m_SheetPosition.y - 175.f));
+	
 	Window->draw(m_ShadowSprite);
 	SpriteManager::Draw(Window);
 }

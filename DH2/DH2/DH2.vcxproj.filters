@@ -39,9 +39,6 @@
     <ClCompile Include="CharacterClass.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
-    <ClCompile Include="Warrior.cpp">
-      <Filter>Source Files\Character</Filter>
-    </ClCompile>
     <ClCompile Include="Stat.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
@@ -57,6 +54,15 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="ClassWarrior.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassTraveler.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterCreator.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObjects.h">
@@ -71,9 +77,6 @@
     <ClInclude Include="ICharacter.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
-    <ClInclude Include="Warrior.h">
-      <Filter>Header Files\Character</Filter>
-    </ClInclude>
     <ClInclude Include="Stat.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
@@ -85,6 +88,15 @@
     </ClInclude>
     <ClInclude Include="AudioManager.h">
       <Filter>Header Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassWarrior.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassTraveler.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterCreator.h">
+      <Filter>Header Files\Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

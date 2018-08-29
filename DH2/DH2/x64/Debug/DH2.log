@@ -1,3 +1,6 @@
-﻿  Engine.cpp
-  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
-  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)
+﻿  Main.cpp
+  Engine.cpp
+  CharacterCreator.cpp
+  Generating Code...
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)
