@@ -1,6 +1,19 @@
-﻿  Main.cpp
+﻿  TestState.cpp
+  StateMachine.cpp
+  State.cpp
+  ClassWarrior.cpp
+  Stat.cpp
+  Main.cpp
+  ICharacter.cpp
+  GameState.cpp
+  GameObjects.cpp
   Engine.cpp
+  Combat.cpp
+  ClassTraveler.cpp
   CharacterCreator.cpp
+  CharacterClass.cpp
+  AudioManager.cpp
+  AssetManagers.cpp
   Generating Code...
-  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
-  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)
+  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
+  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)

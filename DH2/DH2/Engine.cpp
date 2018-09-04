@@ -1,4 +1,5 @@
 #include "Engine.h"
+#include "TestState.h"
 #include <iostream>
 
 Engine::Engine()
@@ -26,6 +27,11 @@ Engine::Engine()
 	testerDude->m_animator->SetAnimationCap(4);
 	testerDude->m_animator->SetUpFrames(AnimationType::IDLE);
 	testerDude->m_animator->AnimationControl(true);
+
+	// For Testing StateMachine
+	m_StateMachine = new StateMachine();
+	StateSetUp(); // Setup Our States
+	m_StateMachine->ChangeState("TestState");
 	////==============================================================================================
 }
 
@@ -43,4 +49,20 @@ void Engine::Draw(sf::RenderWindow* Window)
 void Engine::Update(sf::RenderWindow* Window, float DeltaTime)
 {
 	testerDude->m_animator->PlayAnimation(AnimationType::IDLE, DeltaTime);
+}
+
+void Engine::StateSetUp()
+{
+	/*
+	Set up all the Necessary States for the Game StateMachine.
+	May need another Function to Implement a Stack for the Purpose of Pausing (etc).
+	^ Unless a better way is found.
+
+	Feel free to add comments, as necessary, for all upcoming states.
+
+	Future States that Inherit from Gamestate will Require a Reference to StateMachine and
+	possibly the Engine.
+	*/
+
+	m_StateMachine->AddState("TestState", new TestState(m_StateMachine)); // Only for Testing Purposes
 }

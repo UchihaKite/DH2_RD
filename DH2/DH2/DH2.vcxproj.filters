@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Engine">
       <UniqueIdentifier>{143046c0-2767-42f4-8f1a-faa400cb5766}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\StateMachine">
+      <UniqueIdentifier>{a9ef77cc-31f0-470c-a0b5-27631561dd1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateMachine">
+      <UniqueIdentifier>{c2dc18b9-9d5c-43a9-9e54-c7eb8b8f1747}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameObjects.cpp">
@@ -63,6 +69,18 @@
     <ClCompile Include="CharacterCreator.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="StateMachine.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="TestState.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObjects.h">
@@ -97,6 +115,18 @@
     </ClInclude>
     <ClInclude Include="CharacterCreator.h">
       <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Header Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Header Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="TestState.h">
+      <Filter>Header Files\StateMachine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

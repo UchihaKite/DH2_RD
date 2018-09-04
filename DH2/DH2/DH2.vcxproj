@@ -138,10 +138,14 @@
     <ClCompile Include="Combat.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GameObjects.cpp" />
+    <ClCompile Include="GameState.cpp" />
     <ClCompile Include="ICharacter.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Stat.cpp" />
     <ClCompile Include="ClassWarrior.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="TestState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssetManagers.h" />
@@ -152,9 +156,13 @@
     <ClInclude Include="Combat.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GameObjects.h" />
+    <ClInclude Include="GameState.h" />
     <ClInclude Include="ICharacter.h" />
     <ClInclude Include="Stat.h" />
     <ClInclude Include="ClassWarrior.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="TestState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
