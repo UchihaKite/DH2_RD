@@ -1,19 +1,11 @@
-﻿  TestState.cpp
-  StateMachine.cpp
-  State.cpp
-  ClassWarrior.cpp
-  Stat.cpp
-  Main.cpp
-  ICharacter.cpp
-  GameState.cpp
-  GameObjects.cpp
-  Engine.cpp
-  Combat.cpp
-  ClassTraveler.cpp
-  CharacterCreator.cpp
-  CharacterClass.cpp
-  AudioManager.cpp
-  AssetManagers.cpp
+﻿  PlayerCharacter.cpp
   Generating Code...
-  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
-  DH2.vcxproj -> C:\Users\UchihaKite\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)
+  Compiling...
+  Main.cpp
+  Engine.cpp
+  CharacterCreator.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Combat.cpp
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
+  DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)

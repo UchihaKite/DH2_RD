@@ -1,78 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Source Files\Character">
-      <UniqueIdentifier>{9faca735-6ed7-4edf-8a7a-add76bada6ab}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Character">
-      <UniqueIdentifier>{2aaeddb1-2725-4f62-b33e-cacb7a471176}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Engine">
-      <UniqueIdentifier>{47ea0cac-e229-4d1d-be23-9386aee1ba5d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Engine">
-      <UniqueIdentifier>{143046c0-2767-42f4-8f1a-faa400cb5766}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\StateMachine">
-      <UniqueIdentifier>{a9ef77cc-31f0-470c-a0b5-27631561dd1d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\StateMachine">
-      <UniqueIdentifier>{c2dc18b9-9d5c-43a9-9e54-c7eb8b8f1747}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="GameObjects.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Combat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ICharacter.cpp">
-      <Filter>Source Files\Character</Filter>
-    </ClCompile>
     <ClCompile Include="CharacterClass.cpp">
-      <Filter>Source Files\Character</Filter>
-    </ClCompile>
-    <ClCompile Include="Stat.cpp">
-      <Filter>Source Files\Character</Filter>
-    </ClCompile>
-    <ClCompile Include="AssetManagers.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="AudioManager.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="ClassWarrior.cpp">
-      <Filter>Source Files\Character</Filter>
-    </ClCompile>
-    <ClCompile Include="ClassTraveler.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
     <ClCompile Include="CharacterCreator.cpp">
       <Filter>Source Files\Character</Filter>
     </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Source Files\StateMachine</Filter>
+    <ClCompile Include="ClassTraveler.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassWarrior.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="ICharacter.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerCharacter.cpp">
+      <Filter>Source Files\Character</Filter>
     </ClCompile>
     <ClCompile Include="GameState.cpp">
+      <Filter>Source Files\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
       <Filter>Source Files\StateMachine</Filter>
     </ClCompile>
     <ClCompile Include="StateMachine.cpp">
@@ -81,45 +31,69 @@
     <ClCompile Include="TestState.cpp">
       <Filter>Source Files\StateMachine</Filter>
     </ClCompile>
+    <ClCompile Include="AssetManagers.cpp">
+      <Filter>Source Files\Engine/Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Source Files\Engine/Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files\Engine/Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjects.cpp">
+      <Filter>Source Files\Engine/Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\Engine/Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Stat.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Combat.cpp">
+      <Filter>Source Files\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameObjects.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Combat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CharacterClass.h">
-      <Filter>Header Files\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="ICharacter.h">
-      <Filter>Header Files\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="Stat.h">
-      <Filter>Header Files\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="AssetManagers.h">
-      <Filter>Header Files\Engine</Filter>
+      <Filter>Header Files\Engine/Manager</Filter>
     </ClInclude>
     <ClInclude Include="AudioManager.h">
-      <Filter>Header Files\Engine</Filter>
+      <Filter>Header Files\Engine/Manager</Filter>
     </ClInclude>
-    <ClInclude Include="ClassWarrior.h">
-      <Filter>Header Files\Character</Filter>
-    </ClInclude>
-    <ClInclude Include="ClassTraveler.h">
+    <ClInclude Include="CharacterClass.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
     <ClInclude Include="CharacterCreator.h">
       <Filter>Header Files\Character</Filter>
     </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Header Files\StateMachine</Filter>
+    <ClInclude Include="ClassTraveler.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassWarrior.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Header Files\Engine/Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjects.h">
+      <Filter>Header Files\Engine/Manager</Filter>
     </ClInclude>
     <ClInclude Include="GameState.h">
+      <Filter>Header Files\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="ICharacter.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerCharacter.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Combat.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Stat.h">
+      <Filter>Header Files\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
       <Filter>Header Files\StateMachine</Filter>
     </ClInclude>
     <ClInclude Include="StateMachine.h">
@@ -128,5 +102,31 @@
     <ClInclude Include="TestState.h">
       <Filter>Header Files\StateMachine</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{baf4e30e-56a8-4192-a379-92eb2e75f253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{268e1897-f6bd-4c2e-9490-33be98f588d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Character">
+      <UniqueIdentifier>{42a094a8-438a-4cc8-bdcd-e82b1ea5e18a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateMachine">
+      <UniqueIdentifier>{1fa56ca1-4b66-4f1c-a4a2-75cb07a50a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine/Manager">
+      <UniqueIdentifier>{85bae3d6-f1ef-4312-be98-e54d719aaf37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Character">
+      <UniqueIdentifier>{50ec5e25-9f6b-4817-92e5-450f7cc19fb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine/Manager">
+      <UniqueIdentifier>{a6ab9ad9-6b51-4b4b-8cc1-9023d88a4c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StateMachine">
+      <UniqueIdentifier>{ee8e6ff4-8357-4dbd-95c3-b765107b7c25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

@@ -1,10 +1,10 @@
 #pragma once
 #include <vector>
-#include "ICharacter.h"
+#include "PlayerCharacter.h"
 class Combat
 {
 public:
-	Combat(std::vector<ICharacter*> characterList);
+	Combat(std::vector<PlayerCharacter*> characterList);
 	~Combat();
 
 	void StartCombat(); //Any setup that might need to be done during initialization.
@@ -25,6 +25,6 @@ public:
 	ICharacter* CurrentAttacker;
 	ICharacter* CurrentTarget;
 
-	std::vector<ICharacter*> m_playerGroup;
+	std::vector<PlayerCharacter*> m_playerGroup;
 	std::vector<ICharacter*> m_enemyGroup;
 };

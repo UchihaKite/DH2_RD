@@ -6,6 +6,7 @@
 //	This class *may* also contain the list of equipped skills, unless we make all unlocked skills available
 //	Depending on the layout, may also have certain equippable passives, to further customize.
 //===========================================================================================================================================
+
 class CharacterClass
 {
 public:

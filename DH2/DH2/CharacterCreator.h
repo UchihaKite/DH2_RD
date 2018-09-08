@@ -1,5 +1,5 @@
 #pragma once
-#include "ICharacter.h"
+#include "PlayerCharacter.h"
 #include "ClassTraveler.h"
 /*
 	Use this class for any character creation needs. 
@@ -25,7 +25,7 @@ public:
 	ICharacter* CreatePlayerCharacter()
 	{
 		//Once PlayerCharacter and AICharacter classes are created, we'll create here instead of calling the interface class
-		tempCharacter = new ICharacter("Sprites/Characters/AdamShield.png", sf::Vector2f(200.f, 200.f), sf::Vector2f(2.0f, 2.0f));
+		tempCharacter = new PlayerCharacter("Sprites/Characters/Camilla Samurai 4.png", sf::Vector2f(200.f, 200.f), sf::Vector2f(2.0f, 2.0f));
 		tempCharacter->SetCharacterClass(new ClassTraveler);
 		return tempCharacter;
 	}

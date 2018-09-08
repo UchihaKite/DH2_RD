@@ -2,7 +2,7 @@
 
 
 
-Combat::Combat(std::vector<ICharacter*> characterList) : m_playerGroup(characterList)
+Combat::Combat(std::vector<PlayerCharacter*> characterList) : m_playerGroup(characterList)
 {
 }
 
@@ -49,8 +49,8 @@ void Combat::HandlePlayerLoss()
 void Combat::Attack(ICharacter* Attacker, ICharacter* Target)
 {
 	//Using essentially the pokemon dmg formula but took out the modifier till we figure that part out  |
-	//The formula uses BP (base power) as a multiplier as well, but I replaced (for now) with this 5 ---V
-	float Damage = (Attacker->GetLevel() + 10 / 250) * (Attacker->GetStrength() / Target->GetDefense()) * 5 + 2;
+	//The formula uses BP (base power) as a multiplier as well, but I replaced (for now) with this 5 --------------------------------------------V
+	float Damage = (Attacker->GetCurrentStat("Level") + 10 / 250) * (Attacker->GetCurrentStat("Strength") / Target->GetCurrentStat("Defense")) * 5 + 2;
 
 	//Here we would do any kind of dodge calculation to see if the attack actually strikes.
 	bool ItDoesHit = true;

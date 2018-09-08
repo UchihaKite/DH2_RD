@@ -3,7 +3,7 @@
 class Stat
 {
 public:
-	Stat(std::string id, float current, float max); 
+	Stat(float current, float max); 
 	
 	float GetCurrent() { return m_current; }
 	float GetMax() { return m_max; }
@@ -22,7 +22,5 @@ public:
 private:
 	float m_current;
 	float m_max;
-
-	std::string m_id;
 };
 

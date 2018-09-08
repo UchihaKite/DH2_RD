@@ -16,38 +16,40 @@ public:
 
 	virtual void Draw(sf::RenderWindow* window);
 	virtual void Update(sf::RenderWindow* window, float dt);
+
+	std::string GetName() { return m_Name; }
+	void SetName(std::string name) { m_Name = name; }
 	
-	float GetLevel() { return m_Level->GetCurrent(); }
-	float GetStrength() { return m_Strength->GetCurrent(); }
-	float GetDefense() { return m_Defense->GetCurrent(); }
-	float GetMagic() { return m_Magic->GetCurrent(); }
-	float GetDexterity() { return m_Dexterity->GetCurrent(); }
-	float GetHealth() { return m_Health->GetCurrent(); }
+	float GetCurrentStat(std::string desiredStat);
+	float GetMaxStat(std::string desiredStat);
+
+	Stat* GetStat(std::string desiredStat);
+
+	void SetCurrentStat(std::string desiredStat, float desiredValue);
+	void SetMaxStat(std::string desiredStat, float desiredValue);
 
 	CharacterClass* GetCharacterClass() { return m_Class; }
 	void SetCharacterClass(CharacterClass* newClass) { m_Class = newClass; }
 
 	void PrintStats() // Temp implementation. This will eventually grab stats for UI readouts or whatever, but not print to logs unless we really want to.
 	{
-		std::cout << "Health: " << GetHealth() << std::endl;
+		std::cout << "Name: " << GetName() << std::endl;
+		std::cout << "Health: " << GetCurrentStat("Health") << std::endl;
 
 		if (m_Class != NULL)
 		{
 			std::cout << "Class: " << m_Class->GetClassName() << std::endl;
 		}
 
-		std::cout << "Strength: " << GetStrength() << std::endl;
-		std::cout << "Defense: " << GetDefense() << std::endl;
-		std::cout << "Magic: " << GetMagic() << std::endl;
-		std::cout << "Dexterity: " << GetDexterity() << std::endl;
-		std::cout << "Level: " << GetLevel() << std::endl;
+		std::cout << "Strength: " << GetCurrentStat("Strength") << std::endl;
+		std::cout << "Defense: " << GetCurrentStat("Defense") << std::endl;
+		std::cout << "Magic: " << GetCurrentStat("Magic") << std::endl;
+		std::cout << "Dexterity: " << GetCurrentStat("Dexterity") << std::endl;
+		std::cout << "Level: " << GetCurrentStat("Level") << std::endl;
 	}
 
 	void TakeDamage(float dmg);
 	void Die();
-
-	void GainExperience(float earnedXp);
-	virtual void LevelUp();
 
 	AnimationManager* m_animator;
 
@@ -56,13 +58,6 @@ protected:
 	std::string m_Name;
 	CharacterClass* m_Class;
 
-	//Better as an array, May rework how they're created/fetched to allow easier creation
-	Stat* m_Strength;
-	Stat* m_Defense;
-	Stat* m_Dexterity;
-	Stat* m_Magic;
-	Stat* m_Health;
-	Stat* m_Exp;
-	Stat* m_Level;
+	std::map<std::string, Stat> m_stats;
 };
 
