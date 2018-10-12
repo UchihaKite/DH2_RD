@@ -17,13 +17,15 @@ public:
 	virtual void Draw(sf::RenderWindow* window);
 	virtual void Update(sf::RenderWindow* window, float dt);
 
-	std::string GetName() { return m_Name; }
+	std::string GetName() const { return m_Name; }
 	void SetName(std::string name) { m_Name = name; }
 	
-	float GetCurrentStat(std::string desiredStat);
+	float GetCurrentStat(std::string desiredStat); 
 	float GetMaxStat(std::string desiredStat);
 
 	Stat* GetStat(std::string desiredStat);
+
+	AnimationType GetCurrentAnimationType() { return m_CurrentAnim; }
 
 	void SetCurrentStat(std::string desiredStat, float desiredValue);
 	void SetMaxStat(std::string desiredStat, float desiredValue);
@@ -51,12 +53,19 @@ public:
 	void TakeDamage(float dmg);
 	void Die();
 
+	void SetIdle();
+
+	//Checking against only name might not be enough, might need to make this more robust later
+	inline bool operator==(const ICharacter& checker) { return checker.GetName() == this->GetName(); }
+
 	AnimationManager* m_animator;
 
 protected:
 
 	std::string m_Name;
 	CharacterClass* m_Class;
+
+	AnimationType m_CurrentAnim;
 
 	std::map<std::string, Stat> m_stats;
 };

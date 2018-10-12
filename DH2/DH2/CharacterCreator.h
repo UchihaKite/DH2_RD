@@ -22,10 +22,10 @@ public:
 		return instance;
 	}
 
-	ICharacter* CreatePlayerCharacter()
+	PlayerCharacter* CreatePlayerCharacter()
 	{
 		//Once PlayerCharacter and AICharacter classes are created, we'll create here instead of calling the interface class
-		tempCharacter = new PlayerCharacter("Sprites/Characters/Camilla Samurai 4.png", sf::Vector2f(200.f, 200.f), sf::Vector2f(2.0f, 2.0f));
+		tempCharacter = new PlayerCharacter("Sprites/Characters/Camilla Samurai 4.png", sf::Vector2f(200.f, 200.f), sf::Vector2f(-2.0f, 2.0f));
 		tempCharacter->SetCharacterClass(new ClassTraveler);
 		return tempCharacter;
 	}
@@ -38,7 +38,7 @@ private:
 	CharacterCreator(CharacterCreator const&); // Don't Implement
 	void operator=(CharacterCreator const&); // Don't implement
 
-	ICharacter* tempCharacter;
+	PlayerCharacter* tempCharacter;
 };
 
 

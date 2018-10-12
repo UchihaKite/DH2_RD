@@ -51,7 +51,7 @@ void AnimationManager::Update(float DeltaTime)
 void AnimationManager::Draw(sf::RenderWindow* Window)
 {
 	m_ShadowSprite.setTexture(m_ShadowTexture);
-	m_ShadowSprite.setPosition(m_Sprite.getPosition() - sf::Vector2f(m_SheetPosition.x - 110.f, m_SheetPosition.y - 175.f));
+	m_ShadowSprite.setPosition(m_Sprite.getPosition() - sf::Vector2f(m_SheetPosition.x + 90.f, m_SheetPosition.y - 175.f));
 	
 	Window->draw(m_ShadowSprite);
 	SpriteManager::Draw(Window);
@@ -59,21 +59,21 @@ void AnimationManager::Draw(sf::RenderWindow* Window)
 
 void AnimationManager::SetUpFrames(AnimationType Type)
 {
-	if (Type == IDLE)
+	if (Type == AnimationType::IDLE)
 	{
 		for (int AddFrame = 0; AddFrame <= m_AnimationLength; AddFrame++)
 		{
 			m_IdleFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, SPRITE_SIZE, SPRITE_SIZE));
 		}
 	}
-	if (Type == WALK)
+	if (Type == AnimationType::WALK)
 	{
 		for (int AddFrame = 0; AddFrame <= m_AnimationLength; AddFrame++)
 		{
 			m_WalkFrames.push_back(sf::IntRect(AddFrame * m_SheetPosition.x, m_SheetPosition.y, SPRITE_SIZE, SPRITE_SIZE));
 		}
 	}
-	if (Type == POWERUP)
+	if (Type == AnimationType::POWERUP)
 	{
 		for (int AddFrame = 0; AddFrame <= m_AnimationLength; AddFrame++)
 		{
@@ -86,15 +86,15 @@ void AnimationManager::PlayAnimation(AnimationType Type, float DeltaTime) // Use
 {
 	if (m_StartAnimation == true)
 	{
-		if (Type == IDLE)
+		if (Type == AnimationType::IDLE)
 		{
 			Animate(DeltaTime, m_IdleFrames);
 		}
-		if (Type == WALK)
+		if (Type == AnimationType::WALK)
 		{
 			Animate(DeltaTime, m_WalkFrames);
 		}
-		if (Type == POWERUP)
+		if (Type == AnimationType::POWERUP)
 		{
 			Animate(DeltaTime, m_PowerUpFrames);
 		}

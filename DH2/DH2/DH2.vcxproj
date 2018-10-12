@@ -141,6 +141,7 @@
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="ICharacter.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerCharacter.cpp" />
     <ClCompile Include="Stat.cpp" />
     <ClCompile Include="ClassWarrior.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="GameObjects.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="ICharacter.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="Stat.h" />
     <ClInclude Include="ClassWarrior.h" />

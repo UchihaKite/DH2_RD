@@ -4,8 +4,6 @@ ICharacter::ICharacter(std::string FileLocation, sf::Vector2f pos, sf::Vector2f 
 {
 	m_Name = "BaseCharacter"; //Make a randomizer or let the Player type their desired name
 
-	m_animator = new AnimationManager(FileLocation, sf::Vector2f(2.0f, 2.0f), pos, sf::Vector2f(0.f, 0.f));
-
 	m_stats = 
 	{
 		{"Strength", Stat(5,5)},
@@ -80,4 +78,14 @@ void ICharacter::Die()
 {
 	//If we drop to 0, kill this fucker
 	delete this; // probably shouldn't do it like this haha thug life
+}
+
+void ICharacter::SetIdle()
+{
+	m_animator->SetSheetPosition(sf::Vector2i(96, 0));
+	m_animator->SetAnimationLength(4);
+	m_animator->SetAnimationCap(4);
+	m_animator->SetUpFrames(AnimationType::IDLE);
+	m_animator->AnimationControl(true);
+	m_CurrentAnim = AnimationType::IDLE;
 }

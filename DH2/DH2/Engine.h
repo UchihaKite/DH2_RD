@@ -1,7 +1,7 @@
 #pragma once
-#include "ICharacter.h"
+#include "PlayerCharacter.h"
 #include "CharacterCreator.h"
-
+#include "Player.h"
 #include "StateMachine.h"
 
 class Engine
@@ -19,7 +19,8 @@ private:
 	sf::Texture m_backgroundTex;
 	sf::Sprite m_background;
 
-	ICharacter* testerDude;
+	Player* m_player;
+	PlayerCharacter* testerDude;
 
 	StateMachine* m_StateMachine;
 };

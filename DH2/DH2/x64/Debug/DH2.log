@@ -1,11 +1,11 @@
-﻿  PlayerCharacter.cpp
-  Generating Code...
-  Compiling...
-  Main.cpp
-  Engine.cpp
-  CharacterCreator.cpp
+﻿  CharacterCreator.cpp
   Generating Code...
   Skipping... (no relevant changes detected)
+  PlayerCharacter.cpp
+  Player.cpp
+  Main.cpp
+  ICharacter.cpp
+  Engine.cpp
   Combat.cpp
   DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.exe
   DH2.vcxproj -> C:\Users\Cody\Desktop\DH2_RD\DH2\x64\Debug\DH2.pdb (Partial PDB)

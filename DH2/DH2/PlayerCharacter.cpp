@@ -2,13 +2,15 @@
 
 
 
-PlayerCharacter::PlayerCharacter(std::string FileLocation, sf::Vector2f pos, sf::Vector2f size) : ICharacter(FileLocation, pos, size)
+PlayerCharacter::PlayerCharacter(std::string FileLocation, sf::Vector2f pos, sf::Vector2f size) : ICharacter(FileLocation, pos, size),
+m_StatPoints(0), m_SkillPoints(0)
 {
 	//Player specific init shit
 	m_Name = "PlayerCharacter";
 
-	m_StatPoints = 0;
-	m_SkillPoints = 0;
+	m_animator = new AnimationManager(FileLocation, sf::Vector2f(-2.0f, 2.0f), pos, sf::Vector2f(0.f, 0.f));
+
+	SetIdle(); //Setting Idle here, but we'll definitely want some kinda check (can we currently see the sprite for instance) so we're not playing the animation when we dont need to.
 }
 
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "SFML\Graphics.hpp"
 
-enum AnimationType
+enum class AnimationType
 {
 	// List all Animation Types Here
 	IDLE,
@@ -22,6 +22,8 @@ public:
 	inline sf::Vector2f GetSize() { return m_Sprite.getScale(); }
 
 	inline sf::Sprite ReturnSprite() { return m_Sprite; }
+
+	void SetScale(float xScale, float yScale) { m_Sprite.setScale(xScale, yScale); }
 
 protected:
 	sf::Sprite m_Sprite;
@@ -47,8 +49,8 @@ public:
 	inline void SetAnimationCap(int AnimationCap) { m_AnimationCap = AnimationCap; }
 	inline void AnimationControl(bool StartOrStop) { m_StartAnimation = StartOrStop; }
 
-	void SetUpFrames(enum AnimationType Type);
-	void PlayAnimation(enum AnimationType Type, float DeltaTime);
+	void SetUpFrames(enum class AnimationType Type);
+	void PlayAnimation(enum class AnimationType Type, float DeltaTime);
 
 private:
 
